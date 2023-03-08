@@ -41,18 +41,57 @@
                     </td>
 
                     <td >
-					<div class="bio">
-                            <table class="fontbio">
-					<div class="content">
-                    <div class="menu">
-		<ul>
-			<li><a href="index.php?page=home">HOME</a></li>
-			<li><a href="index.php?page=biografi">BIODATA</a></li>
-			<li><a href="index.php?page=tentang">TENTANG</a></li>
-			<li><a href="index.php?page=pengalaman">Pengalaman</a></li>
-		</ul>
-	</div>
+                        <div class="bio">
+                             <table class="fontbio">
+                        <div class="content">
+                            <div class="menu">
+                            <ul>
+                                <li><a href="index.php?page=home">HOME</a></li>
+                                <li><a href="index.php?page=biografi">BIODATA</a></li>
+                                <li><a href="index.php?page=about">TENTANG</a></li>
+                                <li><a href="index.php?page=pengalaman">Pengalaman</a></li>
+                            </ul>
+                    	</div>
 
-</td >
+                    </td >
+
+                    <div class="isi">
+                        
+	<?php 
+	if(isset($_GET['page'])){
+		$bagian = $_GET['page'];
+ 
+		switch ($bagian) {
+			case 'home':
+				include "home.php";
+				break;
+			case 'biografi':
+				include "biografi.php";
+				break;
+			case 'about':
+				include "about.php";
+				break;
+			case 'pengalaman':
+				include "pengalaman.php";
+				break;			
+			default:
+				echo "<center><h3>Oops! Halaman itu tidak tersedia!</h3></center>";
+				break;
+		}
+	}else{
+		include "index.php";
+	}
+ 
+	 ?>
+ 
+	</div>
+</div>
+
+
+</div>
+</div>
+
+</body>
+</html>
 
 </body>
