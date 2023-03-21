@@ -1,14 +1,21 @@
 <div class="halaman">
-    <h3> PEMABA 2022 - Divisi Senior Pendamping </h3>
-        <li>Membantu mahasiswa baru beradaptasi dengan linkungan kampus </li>
-        <li>Membantu mahasiswa baru untuk mengenal sumberdaya kampus</li> <br>
-                            
-    <h3>PEMIRA IF 2023 - Divisi Humas</h3>
-        <li>Mengelola sosial media sebagai media promosi </li>
-        <li>jalin hubungan baik dengan sponsor</li>
-                            
-    <h3> Mesin - Divisi Digital Marketing</h3>
-        <li>Membuat dan mengelola konten digital</li>
-        <li>Menerapkan optimasi SEO </li> <br>
 
+    <?php 
+        $pengalaman = array (
+                        array ('kegiatan' => "PEMABA 2022", 'divisi' => "Senior Pendamping", 'jobdesk1' => "Membantu mahasiswa baru beradaptasi dengan linkungan kampus", 'jobdesk2' => "Membantu mahasiswa baru untuk mengenal sumberdaya kampus"),
+                        array ('kegiatan' => "PEMIRA 2023", 'divisi' => "Humas", 'jobdesk1' => "Mengelola sosial media sebagai media promosi", 'jobdesk2' => "Menjalin hubungan baik dengan sponsor"),
+                        array ('kegiatan' => "Internship CV Rumah Mesin", 'divisi' => "Digital Marketing", 'jobdesk1' => "Membuat dan mengelola konten digital", 'jobdesk2' => "Menerapkan optimasi SEO")
+
+        ); 
+    
+    
+        foreach ($pengalaman as $data) :
+            echo "<h3>" . $data ['kegiatan'] . " - " . $data ['divisi'] . "</h3>";
+            echo "<li>" . $data ['jobdesk1'] . "</li>" ;
+            echo "<li>" . $data ['jobdesk2'] . "</li>" ;
+        
+        endforeach;
+    ?>
+        
+                       
 </div>
